@@ -45,7 +45,6 @@ function playRound() {
     }
 }
 
-
 function game(n = 1) {
     let playerWins = 0;
     let roundResult = 0;
@@ -59,3 +58,29 @@ function game(n = 1) {
         return ("Damn! You lost " + (n - playerWins) + " of " + n + " games.")
     }
 }
+
+// User Interface:
+
+const rockButton = document.createElement("button");
+rockButton.id = "rock";
+
+const paperButton = document.createElement("button");
+paperButton.id = "paper";
+
+const scissorsButton = document.createElement("button");
+scissorsButton.id = "scissors";
+
+const btnContainer = document.createElement("div");
+btnContainer.append(rockButton, paperButton, scissorsButton);
+document.body.appendChild(btnContainer);
+
+
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      return button.id
+    });
+  });
+
+
